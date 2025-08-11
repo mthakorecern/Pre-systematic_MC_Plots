@@ -33,7 +33,7 @@ variableFileNameDictionary = {
 
 variableSettingDictionary = {
     "PV_npvsGood":"50,0,100",  
-   "FatJet_pt": "37,0,2050",      # match your FatJet_pt_nom leading-jet range
+   "FatJet_pt": "37,0,2050",      
     "nFatJet": "20,0,20",
     "nJet": "20,0,20",
     "nTau": "10,0,10",
