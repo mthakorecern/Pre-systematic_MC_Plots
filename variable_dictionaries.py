@@ -154,13 +154,15 @@ variableSettingDictionary = {
 
     # Taus
     "nTau": "10,0,10",
-    "Tau_pt": "20,0,400",
+    "Tau_pt": "20,0,400",#"50,0,1000",#
     "Tau_eta": "16,-3.20,3.20",
     "Tau_phi": "16, -3.20,3.20",
 
     # Boosted Taus
     "nboostedTau": "10,0,10",
-    "boostedTau_pt": "20,0,400",
+    "boostedTau_pt":  "20,0,400",#"50,0,1000",
+    "boostedTau_eta": "16,-3.2,3.2",
+    "boostedTau_phi": "16,-3.2,3.2",
 
     # PuppiMET
     "PuppiMET_pt": "19,50,1000",

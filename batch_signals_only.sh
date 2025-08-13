@@ -39,10 +39,14 @@ python3 norm.py --year "$YEAR" --variables "Muon_phi" --cuts "$CUTS" --weights "
 # --- Taus ---
 python3 norm.py --year "$YEAR" --variables "nTau"   --cuts "$CUTS" --weights "$WEIGHTS" --set_maximum "$MAX" --Channel "$CHANNEL" --log_scale --luminosity "$LUMI"  --signals_only &> log_${YEAR}_signals_nTau.txt &
 python3 norm.py --year "$YEAR" --variables "Tau_pt" --cuts "$CUTS" --weights "$WEIGHTS" --set_maximum "$MAX" --Channel "$CHANNEL" --log_scale --luminosity "$LUMI"  --signals_only &> log_${YEAR}_signals_Tau_pt.txt &
+python3 norm.py --year "$YEAR" --variables "Tau_eta" --cuts "$CUTS" --weights "$WEIGHTS" --set_maximum "$MAX" --Channel "$CHANNEL" --log_scale --luminosity "$LUMI"  --signals_only &> log_${YEAR}_signals_Tau_eta.txt &
+python3 norm.py --year "$YEAR" --variables "Tau_phi" --cuts "$CUTS" --weights "$WEIGHTS" --set_maximum "$MAX" --Channel "$CHANNEL" --log_scale --luminosity "$LUMI"  --signals_only &> log_${YEAR}_signals_Tau_phi.txt &
 
 # --- Boosted Taus ---
 python3 norm.py --year "$YEAR" --variables "nboostedTau"  --cuts "$CUTS" --weights "$WEIGHTS" --set_maximum "$MAX" --Channel "$CHANNEL" --log_scale --luminosity "$LUMI"  --signals_only &> log_${YEAR}_signals_nboostedTau.txt &
 python3 norm.py --year "$YEAR" --variables "boostedTau_pt" --cuts "$CUTS" --weights "$WEIGHTS" --set_maximum "$MAX" --Channel "$CHANNEL" --log_scale --luminosity "$LUMI"  --signals_only &> log_${YEAR}_signals_boostedTau_pt.txt &
+python3 norm.py --year "$YEAR" --variables "boostedTau_eta" --cuts "$CUTS" --weights "$WEIGHTS" --set_maximum "$MAX" --Channel "$CHANNEL" --log_scale --luminosity "$LUMI"  --signals_only &> log_${YEAR}_signals_boostedTau_eta.txt &
+python3 norm.py --year "$YEAR" --variables "boostedTau_phi" --cuts "$CUTS" --weights "$WEIGHTS" --set_maximum "$MAX" --Channel "$CHANNEL" --log_scale --luminosity "$LUMI"  --signals_only &> log_${YEAR}_signals_boostedTau_phi.txt &
 
 # --- PuppiMET ---
 python3 norm.py --year "$YEAR" --variables "PuppiMET_pt"  --cuts "$CUTS" --weights "$WEIGHTS" --set_maximum "$MAX" --Channel "$CHANNEL" --log_scale --luminosity "$LUMI"  --signals_only &> log_${YEAR}_signals_PuppiMET_pt.txt &
