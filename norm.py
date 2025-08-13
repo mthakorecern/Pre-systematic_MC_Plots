@@ -511,7 +511,6 @@ if __name__ == "__main__":
     theLegend.AddEntry(signal_4, '4TeV (1pb x 0.073 (bbtt BR))', "f")
 
 
-    # also draw the preliminary warnings
     cmsLatex = ROOT.TLatex()
     cmsLatex.SetTextSize(0.025)
     cmsLatex.SetNDC(True)
