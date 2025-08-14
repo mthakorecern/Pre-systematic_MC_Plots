@@ -341,7 +341,7 @@ if __name__ == "__main__":
     tree_1.Draw(f"{variable} >> {hist_name_1}", cut_sig)
     signal_1.SetDirectory(0)
     signal_1.Scale(sig_weight_1)
-    print(f"Integral of {hist_name_1} is {signal_1.Integral()}")
+    print(f"Integral of {hist_name_1} is {signal_1.Integral(0, signal_1.GetNbinsX()+1)}")
     print(f" - Entries: {signal_1.GetEntries()}| Weight: {sig_weight_1} | Mean: {signal_1.GetMean():.4f} | Std Dev: {signal_1.GetStdDev():.4f} | Events before Skim applied: {total_events_1}")
     root_file_1.Close()
 
@@ -363,7 +363,7 @@ if __name__ == "__main__":
     tree_2.Draw(f"{variable} >> {hist_name_2}", cut_sig)
     signal_2.SetDirectory(0)
     signal_2.Scale(sig_weight_2)
-    print(f"Integral of {hist_name_2} is {signal_2.Integral()}")
+    print(f"Integral of {hist_name_2} is {signal_2.Integral(0, signal_2.GetNbinsX()+1)}")
     print(f" - Entries: {signal_2.GetEntries()} | Weight: {sig_weight_2} | Mean: {signal_2.GetMean():.4f} | Std Dev: {signal_2.GetStdDev():.4f} | Events before Skim applied: {total_events_2}")
     root_file_2.Close()
 
@@ -385,7 +385,7 @@ if __name__ == "__main__":
     tree_3.Draw(f"{variable} >> {hist_name_3}", cut_sig)
     signal_3.SetDirectory(0)
     signal_3.Scale(sig_weight_3)
-    print(f"Integral of {hist_name_3} is {signal_3.Integral()}")
+    print(f"Integral of {hist_name_3} is {signal_3.Integral(0, signal_3.GetNbinsX()+1)}")
     print(f" - Entries: {signal_3.GetEntries()} | Weight: {sig_weight_3} | Mean: {signal_3.GetMean():.4f} | Std Dev: {signal_3.GetStdDev():.4f} | Events before Skim applied: {total_events_3}")
     root_file_3.Close()
 
@@ -407,7 +407,7 @@ if __name__ == "__main__":
     tree_4.Draw(f"{variable} >> {hist_name_4}", cut_sig)
     signal_4.SetDirectory(0)
     signal_4.Scale(sig_weight_4)
-    print(f"Integral of {hist_name_4} is {signal_4.Integral()}")
+    print(f"Integral of {hist_name_4} is {signal_4.Integral(0, signal_2.GetNbinsX()+1)}")
     print(f" - Entries: {signal_4.GetEntries()} | Weight: {sig_weight_4} | Mean: {signal_4.GetMean():.4f} | Std Dev: {signal_4.GetStdDev():.4f} | Events before Skim applied: {total_events_4}")
     root_file_4.Close()
 
@@ -489,6 +489,7 @@ if __name__ == "__main__":
         frame.GetYaxis().SetTitle("Events")
         ymax = max(signal_1.GetMaximum(), signal_2.GetMaximum(), signal_3.GetMaximum(), signal_4.GetMaximum(), 1.0)
         frame.SetMaximum(1.5*ymax)
+        frame.SetMinimum(1e-1)
         frame.Draw("hist")
 
         signal_1.SetLineColor(ROOT.kRed)
